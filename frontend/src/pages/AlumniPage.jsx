@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import '../styles/AlumniPage.css';
 import { Stack, Spacer, Image, Text, Heading, Button, Menu, MenuButton, MenuList, MenuItem, MenuDivider, Avatar, useStatStyles } from '@chakra-ui/react';
-import { BellIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { BellIcon, ChevronDownIcon, ArrowBackIcon } from '@chakra-ui/icons';
 import AlumniDirectory from '../components/AlumniDirectory';
+import JobPortal from '../components/JobPortal';
 import ImageComponent from '../components/ImageComponent';
+import { useNavigate } from 'react-router-dom';
 
 export default function AlumniPage() {
+    const navigate = useNavigate();
+
     const name = 'Tony Stark';
     const [selected, setSelected] = useState(1);
 
+    const navigateToProfile = ()=>{
+        navigate('/profile/6ed028kdj98w0s452d9sdf');
+    }
+    
     return (
         <div>
             <div className="top-bar-ap">
@@ -31,10 +39,13 @@ export default function AlumniPage() {
                             <ChevronDownIcon />
                         </MenuButton>
                         <MenuList>
-                            <MenuItem>Profile</MenuItem>
-                            <MenuItem>New Window</MenuItem>
+                            <MenuItem onClick={navigateToProfile}>View Profile</MenuItem>
+                            <MenuItem>Help</MenuItem>
                             <MenuDivider />
-                            <MenuItem>Open...</MenuItem>
+                            <MenuItem>
+                                <ArrowBackIcon/>
+                                Back to Home
+                            </MenuItem>
                         </MenuList>
                     </Menu>
                 </div>
@@ -76,7 +87,7 @@ export default function AlumniPage() {
                 </div>
                 <div className="display-ap">
                     {/* {selected === 1 && </>} */}
-                    {/* {selected === 2 && </>} */}
+                    {selected === 2 && <JobPortal/>}
                     {selected === 3 && <AlumniDirectory/>}
                     {/* {selected === 4 && </>} */}
                     {/* {selected === 5 && </>} */}

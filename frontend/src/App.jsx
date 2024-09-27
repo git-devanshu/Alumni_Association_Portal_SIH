@@ -4,6 +4,7 @@ import { PrimeReactProvider } from 'primereact/api';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';       
 import AlumniPage from './pages/AlumniPage';
 import {CloudinaryProvider} from './context/CloudinaryContext';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
     return(
@@ -19,7 +20,7 @@ function App() {
                     {/* <Route path='/dashboard/alumni' element={</>} /> */}
                     <Route path='/dashboard/alumni' element={<AlumniPage/>} />
                     {/* <Route path='/dashboard/student' element={</>} /> */}
-                    {/* <Route path='' element={</>} /> */}
+                    <Route path='/profile/:id' element={<ProfilePage/>} />
                     {/* <Route path='' element={</>} /> */}
                     {/* <Route path='' element={</>} /> */}
                     {/* <Route path='' element={</>} /> */}

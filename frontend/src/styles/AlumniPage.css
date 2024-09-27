@@ -7,7 +7,7 @@
 
 .sidebar-ap{
     background-color: #0195FF;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     width: 100%;
 }
 
@@ -25,15 +25,15 @@
         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7476%) hue-rotate(50deg) brightness(97%) contrast(99%);
     }
     h2{
-        font-size: 16px;
+        font-size: 17px;
         color: white;
         margin: 0;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 
 .sidebar-ap-option:hover{
-    background-color: #7ec9ff;
+    background-color: #3fafff;
     border-radius: 10px;
 }
 
@@ -53,15 +53,15 @@
         filter: brightness(0) saturate(100%) invert(50%) sepia(42%) saturate(6577%) hue-rotate(185deg) brightness(102%) contrast(106%);
     }
     h2{
-        font-size: 16px;
+        font-size: 17px;
         color: #0195FF;
         margin: 0;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 }
 
 .display-ap{
     background-color: #D4E6EC;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     width: 100%;
 }
